@@ -1,4 +1,4 @@
-import Player from '@vimeo/player';
+// import Player from '@vimeo/player';
 
 // Ознакомься с документацией библиотеки Vimeo плеера.
 // Добавь библиотеку как зависимость проекта через npm.
