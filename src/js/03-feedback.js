@@ -19,14 +19,15 @@ function onFormInputChange(e){
 formData[e.target.name] = e.target.value;
 localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
-
 function onFormSubmit (e) {
-e.preventDefault();
-console.log(formData);
-e.currentTarget.reset();
-localStorage.removeItem(STORAGE_KEY);
+    e.preventDefault();
+    console.log(formData);
+    e.currentTarget.reset();
+    localStorage.removeItem(STORAGE_KEY);
+    formData.email = '';
+    formData.message = '';
 }
-afterReloadPage();
+afterReloadPage(); 
 
 function afterReloadPage() {
     const storageData = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -37,4 +38,6 @@ function afterReloadPage() {
     formData.message = storageData.message;
     };
 }
+
+
 
